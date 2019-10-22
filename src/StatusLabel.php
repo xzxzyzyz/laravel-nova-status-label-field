@@ -2,6 +2,7 @@
 
 namespace Xzxzyzyz\LaravelNova\StatusLabelField;
 
+use Illuminate\Support\Arr;
 use Laravel\Nova\Fields\Select;
 
 class StatusLabel extends Select
@@ -20,7 +21,7 @@ class StatusLabel extends Select
     public function infoValue($value)
     {
         return $this->withMeta([
-            'info' => array_wrap($value)
+            'info' => Arr::wrap($value)
         ]);
     }
 
@@ -42,7 +43,7 @@ class StatusLabel extends Select
     public function successValue($value)
     {
         return $this->withMeta([
-            'success' => array_wrap($value)
+            'success' => Arr::wrap($value)
         ]);
     }
 
@@ -64,7 +65,7 @@ class StatusLabel extends Select
     public function warningValue($value)
     {
         return $this->withMeta([
-            'warning' => array_wrap($value)
+            'warning' => Arr::wrap($value)
         ]);
     }
 
@@ -86,7 +87,7 @@ class StatusLabel extends Select
     public function dangerValue($value)
     {
         return $this->withMeta([
-            'danger' => array_wrap($value)
+            'danger' => Arr::wrap($value)
         ]);
     }
 
